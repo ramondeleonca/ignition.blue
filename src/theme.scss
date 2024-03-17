@@ -44,10 +44,12 @@ h1, h2, h3, h4 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
 
     & > img {
         object-fit: cover;
-        max-width: 500px;
+        max-width: 75%;
     }
 }
 

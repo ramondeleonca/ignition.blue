@@ -17,6 +17,9 @@ module.exports = {
       },
     },
     extend: {
+      screens: {
+        mid: "900px",
+      },
       fontFamily: {
         'akira-expanded': ['AkiraExpanded', 'sans-serif'],
         'neutro': ['Neutro', 'sans-serif'],
