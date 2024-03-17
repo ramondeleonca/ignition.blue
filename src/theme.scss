@@ -1,0 +1,72 @@
+@use "./../node_modules/easings.scss/src/index.scss" as *;
+
+$text: #e6ecf4;
+$background: #05090f;
+$primary: #7face6;
+$secondary: #104b99;
+$accent: #0670f9;
+
+a:not(.unstyled) {
+    position: relative;
+    font-weight: 600;
+    padding-bottom: 5px;
+    text-decoration: none;
+    width: fit-content;
+
+    &::before {
+        content: '🔗';
+        margin-right: 0.5em;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 102%;
+        width: 0%;
+        height: 2px;
+        background-color: $text;
+        transition: width 0.25s $out-cubic, left 0.25s $out-cubic;
+    }
+
+    &:hover::after {
+        left: -2%;
+        width: 104%;
+        transition: width 0.25s $out-cubic;
+    }
+}
+
+h1, h2, h3, h4 {
+    font-family: "AkiraExpanded";
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    & > img {
+        object-fit: cover;
+        max-width: 500px;
+    }
+}
+
+.noise::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/noise.jpg);
+    z-index: -1;
+    opacity: 0.01;
+}
+
+.all-unset {
+    all: unset !important;
+}
+
+* {
+    color: $text;
+}
