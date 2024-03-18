@@ -6,8 +6,8 @@ export default function NavBar() {
             <Link to="/" className="unstyled z-10"><img className="h-full aspect-square" src={Math.floor(Math.random() * 100) == 69 ? "/ignito.svg" : "/logo.svg"} alt="Blue Ignition 3526 Logo"></img></Link>
 
             <div className="absolute w-full h-full top-0 left-0 flex justify-evenly items-center max-md:hidden">
-                <Link to="/about">About</Link>
-                <Link to={`/legacy/${new Date().getUTCFullYear()}`}>{new Date().getUTCFullYear()} season</Link>
+                <Link to="/team">Team</Link>
+                <Link to="/legacy/2024">2024 season</Link>
                 <Link to="/engineering">Engineering</Link>
                 <Link to="/team/sponsors">Sponsors</Link>
             </div>
