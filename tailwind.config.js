@@ -25,7 +25,7 @@ module.exports = {
         'neutro': ['Neutro', 'sans-serif'],
         'neutro-outline': ['Neutro-Outline', 'sans-serif'],
         'strech-pro': ['StrechPro', 'sans-serif'],
-        'underrated': ['Underrated', 'sans-serif'],
+        'montserrat': ['Montserrat Variable', 'sans-serif'],
       },
       colors: {
         "text": "#e6ecf4",

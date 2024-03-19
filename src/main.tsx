@@ -5,7 +5,6 @@ import "./index.scss";
 
 import Index from './routes/Index';
 
-import Team from './routes/team/Team';
 import Alumni from './routes/team/Alumni';
 import Sponsors from './routes/team/Sponsors';
 
@@ -24,10 +23,13 @@ import Engineering from './routes/engineering/Engineering';
 
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import LocomotiveScroll from 'locomotive-scroll';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Main() {
+  new LocomotiveScroll();
+
   return (
     <React.StrictMode>
       <BrowserRouter>
@@ -43,7 +45,6 @@ export default function Main() {
             <Route path='/legacy/2022' element={<Legacy2022></Legacy2022>}></Route>
 
             {/* Team Routes */}
-            <Route path='/team' element={<Team></Team>}></Route>
             <Route path='/team/alumni' element={<Alumni></Alumni>}></Route>
             <Route path='/team/sponsors' element={<Sponsors></Sponsors>}></Route>
 

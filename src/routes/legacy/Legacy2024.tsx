@@ -16,8 +16,7 @@ export default function Legacy2024() {
                     trigger: ".wrapper",
                     start: "top center",
                     end: "top -=500",
-                    scrub: 0.5,
-                    markers: true
+                    scrub: 0.5
                 }
             });
 

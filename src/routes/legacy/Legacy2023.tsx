@@ -16,13 +16,12 @@ export default function Legacy2023() {
                     trigger: ".wrapper",
                     start: "top center",
                     end: "top -=500",
-                    scrub: 0.5,
-                    markers: true
+                    scrub: 0.5
                 }
             });
 
             tl.fromTo(".robot-name", {opacity: 0, scale: 0.5}, { opacity: 1, scale: 1, ease: "power1" }, 0);
-            tl.fromTo(".gallery", {y: () => -document.querySelector(".robot-name")!.clientHeight * 3}, { y: 0, ease: "power1" }, 0);
+            tl.fromTo(".gallery", {y: () => -document.querySelector(".robot-name")!.clientHeight * 4}, { y: 0, ease: "power1" }, 0);
             
             // TODO: Fix missaligned trigger
             gsap.to(".fab", {

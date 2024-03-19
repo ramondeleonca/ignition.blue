@@ -1,13 +1,14 @@
 @use "./theme.scss" as *;
 @use "./shadcn.scss" as *;
+@import url("./../node_modules/locomotive-scroll/bundled/locomotive-scroll.css");
 @import url("./assets/fonts/index.scss");
+@import url("./../node_modules/@fontsource-variable/montserrat/index.css");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-    padding-top: 5rem;
     background-color: $background;
     overflow-x: hidden;
     width: 100%;

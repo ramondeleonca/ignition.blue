@@ -16,7 +16,7 @@ export default function Footer() {
 
                     <div className="flex flex-col">
                         <h2 className="text-2xl max-md:text-base pb-2">OUR TEAM</h2>
-                        <Link className="text-lg max-md:text-sm icon" to="/team">Team</Link>
+                        <Link className="text-lg max-md:text-sm icon" to="/">Home</Link>
                         <Link className="text-lg max-md:text-sm icon" to="/team/alumni">Alumni</Link>
                         <Link className="text-lg max-md:text-sm icon" to="/team/sponsors">Sponsors</Link>
                     </div>
