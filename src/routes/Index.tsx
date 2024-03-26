@@ -9,14 +9,14 @@ export default function Index() {
         "/mafavito/IMG_2405.JPG",
         "/mafavito/IMG_2451.JPG",
         "/mafavito/IMG_2506.JPG",
-        "/mafavito/IMG_2511.JPG",
-        "/mafavito/IMG_2519.JPG",
-        "/mafavito/IMG_2528.JPG",
-        "/mafavito/IMG_2670.JPG",
-        "/mafavito/IMG_2710.JPG",
-        "/mafavito/IMG_2718.JPG",
-        "/mafavito/IMG_2924.JPG",
-        "/mafavito/IMG_2746.JPG",
+        // "/mafavito/IMG_2511.JPG",
+        // "/mafavito/IMG_2519.JPG",
+        // "/mafavito/IMG_2528.JPG",
+        // "/mafavito/IMG_2670.JPG",
+        // "/mafavito/IMG_2710.JPG",
+        // "/mafavito/IMG_2718.JPG",
+        // "/mafavito/IMG_2924.JPG",
+        // "/mafavito/IMG_2746.JPG",
     ]
 
     useEffect(() => {
@@ -47,10 +47,7 @@ export default function Index() {
             tl1.fromTo(".ready-to-ignite-text", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5 }, 0);
             
             const images = document.querySelectorAll(".ready-to-ignite-image");
-            for (let i = 0; i < images.length; i += 2) {
-                tl1.fromTo(images[i], { scale: 1.1, opacity: 0 }, { scale: 1, opacity: 1 }, i);
-                tl1.fromTo(images[i + 1], { scale: 1.1, opacity: 0 }, { scale: 1, opacity: 1 }, i + 1);
-            }
+            for (const [i, image] of images.entries()) if (i < images.length - 1) tl1.fromTo(image, { scale: 1.1, opacity: 1 }, { scale: 1, opacity: 0 }, i);
         });
 
         return () => ctx.revert();
@@ -72,7 +69,7 @@ export default function Index() {
                 <div className="absolute w-full h-full top-0 left-0">
                     <div className="absolute w-full h-full bg-black z-10 bg-opacity-75"></div>
                     <div className="absolute w-full h-full top-0 left-0 -z-10">
-                        {images.map((image, i, arr) => <img key={i} src={image} className={`absolute w-full h-full top-0 left-0 object-cover ready-to-ignite-image ready-to-ignite-image-${i} z-${arr.length - i}`} alt=""></img>)}
+                        {images.map((image, i) => <img key={i} src={image} className={`absolute w-full h-full top-0 left-0 object-cover ready-to-ignite-image ready-to-ignite-image-${i}`} style={{ zIndex: images.length - i }} alt=""></img>)}
                     </div>
                 </div>
                 <h1 className="ready-to-ignite-text text-transparent bg-clip-text bg-gradient-to-t from-transparent to-75% to-text text-[7vw] text-wrap text-center relative z-30">READY TO IGNITE?</h1>
