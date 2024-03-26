@@ -1,7 +1,7 @@
 export default function Engineering() {
     return (
-        <>
-            <h1>Engineering</h1>
-        </>
+        <div className="hero-mid flex items-center justify-center">
+            <h1>Engineering coming soon</h1>
+        </div>
     )
 }

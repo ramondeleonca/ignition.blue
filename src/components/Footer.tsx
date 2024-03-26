@@ -23,8 +23,8 @@ export default function Footer() {
 
                     <div className="flex flex-col">
                         <h2 className="text-2xl max-md:text-base pb-2">ENGINEERING</h2>
+                        <Link className="text-lg max-md:text-sm icon" to="/engineering/bird">BIRD</Link>
                         <Link className="text-lg max-md:text-sm icon" to="/engineering/programming">Programming</Link>
-                        <Link className="text-lg max-md:text-sm icon" to="/engineering/electronics">Electronics</Link>
                         <Link className="text-lg max-md:text-sm icon" to="/engineering/mechanical">Mechanical</Link>
                     </div>
                 </div>

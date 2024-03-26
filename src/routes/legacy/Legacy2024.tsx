@@ -64,7 +64,7 @@ export default function Legacy2024() {
                 <h3 className="my-4 font-neutro font-bold text-4xl w-full text-center">About BLUE</h3>
                 <div className="w-full h-full flex flex-wrap justify-evenly items-center p-4 my-8">
                     <div className="p-10 w-2/5 max-md:w-full">
-                        <div className="text-xl mb-4">
+                        <div className="text-xl mb-4 outline outtline-1 outline-white w-fit p-4 rounded-md bg-stone-800">
                             <p><b>[NAME: BLUE]</b></p>
                             <p><b>[STATUS: IN SERVICE]</b></p>
                             <p><b>[WEIGHT: 46KG]</b></p>

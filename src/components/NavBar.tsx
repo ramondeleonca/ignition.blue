@@ -10,6 +10,7 @@ export default function NavBar() {
             <div className="absolute w-full h-full top-0 left-0 flex justify-evenly items-center max-md:hidden">
                 <Link to="/">Home</Link>
                 <Link to="/legacy/2024">2024 season</Link>
+                <Link to="/engineering/bird">BIRD</Link>
                 <Link to="/engineering">Engineering</Link>
                 <Link to="/team/sponsors">Sponsors</Link>
             </div>

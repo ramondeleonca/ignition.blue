@@ -55,19 +55,19 @@ export default function Legacy2023() {
             <h1 className="mb-4 text-9xl max-md:text-5xl max-mid:text-7xl w-full text-center text-transparent bg-clip-text bg-gradient-to-t from-transparent to-75% to-text robot-name">MAFAVITO</h1>
 
             <div className="gallery">
-                <img src="/IMG_2399.JPG" alt="" loading="lazy"></img>
-                <img src="/IMG_2378.JPG" alt="" loading="lazy"></img>
-                <img src="/IMG_2405.JPG" alt="" loading="lazy"></img>
-                <img src="/IMG_2451.JPG" alt="" loading="lazy"></img>
-                <img src="/IMG_2506.JPG" alt="" loading="lazy"></img>
-                <img src="/IMG_2511.JPG" alt="" loading="lazy"></img>
-                <img src="/IMG_2519.JPG" alt="" loading="lazy"></img>
-                <img src="/IMG_2528.JPG" alt="" loading="lazy"></img>
-                <img src="/IMG_2670.JPG" alt="" loading="lazy"></img>
-                <img src="/IMG_2710.JPG" alt="" loading="lazy"></img>
-                <img src="/IMG_2718.JPG" alt="" loading="lazy"></img>
-                <img src="/IMG_2924.JPG" alt="" loading="lazy"></img>
-                <img src="/IMG_2746.JPG" alt="" loading="lazy"></img>
+                <img src="/mafavito/IMG_2399.JPG" alt="" loading="lazy"></img>
+                <img src="/mafavito/IMG_2378.JPG" alt="" loading="lazy"></img>
+                <img src="/mafavito/IMG_2405.JPG" alt="" loading="lazy"></img>
+                <img src="/mafavito/IMG_2451.JPG" alt="" loading="lazy"></img>
+                <img src="/mafavito/IMG_2506.JPG" alt="" loading="lazy"></img>
+                <img src="/mafavito/IMG_2511.JPG" alt="" loading="lazy"></img>
+                <img src="/mafavito/IMG_2519.JPG" alt="" loading="lazy"></img>
+                <img src="/mafavito/IMG_2528.JPG" alt="" loading="lazy"></img>
+                <img src="/mafavito/IMG_2670.JPG" alt="" loading="lazy"></img>
+                <img src="/mafavito/IMG_2710.JPG" alt="" loading="lazy"></img>
+                <img src="/mafavito/IMG_2718.JPG" alt="" loading="lazy"></img>
+                <img src="/mafavito/IMG_2924.JPG" alt="" loading="lazy"></img>
+                <img src="/mafavito/IMG_2746.JPG" alt="" loading="lazy"></img>
             </div>
 
             <div ref={aboutRef} id="about">
@@ -91,7 +91,7 @@ export default function Legacy2023() {
                     </div>
 
                     <div className="flex items-center justify-center h-full my-4">
-                        <img src="/IMG_2399.JPG" alt="" loading="lazy" className="object-cover w-96 h-full aspect-square"></img>
+                        <img src="/mafavito/IMG_2399.JPG" alt="" loading="lazy" className="object-cover w-96 h-full aspect-square"></img>
                     </div>
 
                     <div className="min-w-96">

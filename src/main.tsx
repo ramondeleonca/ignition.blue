@@ -13,7 +13,7 @@ import Legacy2023 from './routes/legacy/Legacy2023';
 import Legacy2022 from './routes/legacy/Legacy2022';
 
 import Programming from './routes/engineering/Programming';
-import Electrical from './routes/engineering/Electrical';
+import BIRD from './routes/engineering/BIRD';
 import Mechanical from './routes/engineering/Mechanical';
 
 import Footer from './components/Footer';
@@ -51,7 +51,7 @@ export default function Main() {
             {/* Engineering Routes */}
             <Route path='/engineering' element={<Engineering></Engineering>}></Route>
             <Route path='/engineering/programming' element={<Programming></Programming>}></Route>
-            <Route path='/engineering/electrical' element={<Electrical></Electrical>}></Route>
+            <Route path='/engineering/bird' element={<BIRD></BIRD>}></Route>
             <Route path='/engineering/mechanical' element={<Mechanical></Mechanical>}></Route>
           </Routes>
         </Suspense>

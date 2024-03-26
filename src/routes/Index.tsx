@@ -1,25 +1,23 @@
 import { DotLottiePlayer } from "@dotlottie/react-player";
 import gsap from "gsap";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export default function Index() {
     const images = [
-        "/IMG_2399.JPG",
-        "/IMG_2378.JPG",
-        "/IMG_2405.JPG",
-        "/IMG_2451.JPG",
-        "/IMG_2506.JPG",
-        "/IMG_2511.JPG",
-        "/IMG_2519.JPG",
-        "/IMG_2528.JPG",
-        "/IMG_2670.JPG",
-        "/IMG_2710.JPG",
-        "/IMG_2718.JPG",
-        "/IMG_2924.JPG",
-        "/IMG_2746.JPG"
-    ];
-
-    const [image, setImage] = useState(images[0]);
+        "/mafavito/IMG_2399.JPG",
+        "/mafavito/IMG_2378.JPG",
+        "/mafavito/IMG_2405.JPG",
+        "/mafavito/IMG_2451.JPG",
+        "/mafavito/IMG_2506.JPG",
+        "/mafavito/IMG_2511.JPG",
+        "/mafavito/IMG_2519.JPG",
+        "/mafavito/IMG_2528.JPG",
+        "/mafavito/IMG_2670.JPG",
+        "/mafavito/IMG_2710.JPG",
+        "/mafavito/IMG_2718.JPG",
+        "/mafavito/IMG_2924.JPG",
+        "/mafavito/IMG_2746.JPG",
+    ]
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -42,17 +40,21 @@ export default function Index() {
                     start: "top top",
                     end: "bottom top",
                     scrub: 1,
-                    pin: true,
-                    markers: true,
-                    onUpdate: (self) => setImage(images[Math.floor(self.progress * images.length)])
+                    pin: true
                 },
             });
 
-            tl1.fromTo(".ready-to-ignite-text", { scale: 0.15, opacity: 0.15 }, { scale: 1, opacity: 1 }, 0);
+            tl1.fromTo(".ready-to-ignite-text", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5 }, 0);
+            
+            const images = document.querySelectorAll(".ready-to-ignite-image");
+            for (let i = 0; i < images.length; i += 2) {
+                tl1.fromTo(images[i], { scale: 1.1, opacity: 0 }, { scale: 1, opacity: 1 }, i);
+                tl1.fromTo(images[i + 1], { scale: 1.1, opacity: 0 }, { scale: 1, opacity: 1 }, i + 1);
+            }
         });
 
         return () => ctx.revert();
-    }, [images]);
+    }, []);
 
     return (
         <>
@@ -69,7 +71,9 @@ export default function Index() {
             <div className="hero relative overflow-hidden ready-to-ignite-section flex items-center justify-center flex-wrap">
                 <div className="absolute w-full h-full top-0 left-0">
                     <div className="absolute w-full h-full bg-black z-10 bg-opacity-75"></div>
-                    <img src={image} className="object-cover" alt="" />
+                    <div className="absolute w-full h-full top-0 left-0 -z-10">
+                        {images.map((image, i, arr) => <img key={i} src={image} className={`absolute w-full h-full top-0 left-0 object-cover ready-to-ignite-image ready-to-ignite-image-${i} z-${arr.length - i}`} alt=""></img>)}
+                    </div>
                 </div>
                 <h1 className="ready-to-ignite-text text-transparent bg-clip-text bg-gradient-to-t from-transparent to-75% to-text text-[7vw] text-wrap text-center relative z-30">READY TO IGNITE?</h1>
             </div>

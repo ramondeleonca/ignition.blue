@@ -1,7 +1,7 @@
 export default function Mechanical() {
     return (
-        <div>
-            <h1>Mechanical</h1>
+        <div className="hero-mid flex items-center justify-center">
+            <h1>Mechanical coming soon</h1>
         </div>
     )
 }
