@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import "./index.scss";
@@ -18,7 +18,6 @@ import Mechanical from './routes/engineering/Mechanical';
 
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
-import Loading from './routes/loading';
 import Engineering from './routes/engineering/Engineering';
 
 import gsap from 'gsap';
@@ -32,29 +31,27 @@ export default function Main() {
 
   return (
     <React.StrictMode>
-      <BrowserRouter>
+      <BrowserRouter future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
         <NavBar></NavBar>
-        <Suspense fallback={<Loading></Loading>}>
-          <Routes>
-            {/* Homepage */}
-            <Route path='/' element={<Index></Index>}></Route>
+        <Routes>
+          {/* Homepage */}
+          <Route path='/' Component={Index}></Route>
 
-            {/* Legacy routes */}
-            <Route path='/legacy/2024' element={<Legacy2024></Legacy2024>}></Route>
-            <Route path='/legacy/2023' element={<Legacy2023></Legacy2023>}></Route>
-            <Route path='/legacy/2022' element={<Legacy2022></Legacy2022>}></Route>
+          {/* Legacy routes */}
+          <Route path='/legacy/2024' Component={Legacy2024}></Route>
+          <Route path='/legacy/2023' Component={Legacy2023}></Route>
+          <Route path='/legacy/2022' Component={Legacy2022}></Route>
 
-            {/* Team Routes */}
-            <Route path='/team/alumni' element={<Alumni></Alumni>}></Route>
-            <Route path='/team/sponsors' element={<Sponsors></Sponsors>}></Route>
+          {/* Team Routes */}
+          <Route path='/team/alumni' Component={Alumni}></Route>
+          <Route path='/team/sponsors' Component={Sponsors}></Route>
 
-            {/* Engineering Routes */}
-            <Route path='/engineering' element={<Engineering></Engineering>}></Route>
-            <Route path='/engineering/programming' element={<Programming></Programming>}></Route>
-            <Route path='/engineering/bird' element={<BIRD></BIRD>}></Route>
-            <Route path='/engineering/mechanical' element={<Mechanical></Mechanical>}></Route>
-          </Routes>
-        </Suspense>
+          {/* Engineering Routes */}
+          <Route path='/engineering' Component={Engineering}></Route>
+          <Route path='/engineering/programming' Component={Programming}></Route>
+          <Route path='/engineering/bird' Component={BIRD}></Route>
+          <Route path='/engineering/mechanical' Component={Mechanical}></Route>
+        </Routes>
         <Footer></Footer>
       </BrowserRouter>
     </React.StrictMode>
