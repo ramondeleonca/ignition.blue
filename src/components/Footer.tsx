@@ -31,9 +31,7 @@ export default function Footer() {
                             <Link className="text-lg max-md:text-sm icon m-auto" to="/engineering/programming">Programming</Link>
                             <Link className="text-lg max-md:text-sm icon m-auto" to="/engineering/mechanical">Mechanical</Link>
                         </div>
-
                     </div>
-                    
                 </div>
                 <img src={THE_FLAME_MUST_KEEP_BURNING} className="w-3/4 p-2 lg:hidden" alt="THE FLAME MUST KEEP BURNING" />
             </div>
