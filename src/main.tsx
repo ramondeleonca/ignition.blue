@@ -31,7 +31,7 @@ export default function Main() {
 
   return (
     <React.StrictMode>
-      <BrowserRouter future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
+      <BrowserRouter future={{ v7_startTransition: true }}>
         <NavBar></NavBar>
         <Routes>
           {/* Homepage */}
