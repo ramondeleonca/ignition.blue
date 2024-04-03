@@ -6,7 +6,7 @@ import THE_FLAME_MUST_KEEP_BURNING from "./../assets/THE_FLAME_MUST_KEEP_BURNING
 
 export default function Footer() {
     return (
-        <footer className="p-8 max-md:p-2 pb-2">
+        <footer className="p-8 max-md:p-2 pb-2 border-t border-1 border-white">
             <div className="flex items-start justify-between max-lg:flex-col max-lg:items-center">
                 <img src={THE_FLAME_MUST_KEEP_BURNING} className="w-1/3 p-2 max-lg:hidden" alt="THE FLAME MUST KEEP BURNING" />
                 <div className="w-2/3 max-lg:w-full">
