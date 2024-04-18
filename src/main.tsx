@@ -15,6 +15,7 @@ import Legacy2022 from './routes/legacy/Legacy2022';
 import Programming from './routes/engineering/Programming';
 import BIRD from './routes/engineering/BIRD';
 import Mechanical from './routes/engineering/Mechanical';
+import notound from './routes/NotFound';
 
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
@@ -31,7 +32,7 @@ export default function Main() {
 
   return (
     <React.StrictMode>
-      <BrowserRouter future={{ v7_startTransition: true }}>
+      <BrowserRouter future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
         <NavBar></NavBar>
         <Routes>
           {/* Homepage */}
@@ -51,6 +52,9 @@ export default function Main() {
           <Route path='/engineering/programming' Component={Programming}></Route>
           <Route path='/engineering/bird' Component={BIRD}></Route>
           <Route path='/engineering/mechanical' Component={Mechanical}></Route>
+
+          {/* 404 */}
+          <Route path='/*' Component={notound}></Route>
         </Routes>
         <Footer></Footer>
       </BrowserRouter>
